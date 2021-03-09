@@ -7,7 +7,7 @@ import model.Items;
 
 
 /**
- * @author sundar
+ * @author sundaresan
  *
  */
 public class ItemExample {
