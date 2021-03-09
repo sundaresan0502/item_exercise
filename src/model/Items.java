@@ -1,7 +1,7 @@
 package model;
 
 /**
- * @author sundar
+ * @author sundaresan
  *
  */
 public class Items {
