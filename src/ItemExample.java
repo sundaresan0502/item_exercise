@@ -13,8 +13,12 @@ import model.Items;
 public class ItemExample {
 	
 	public static void main(String[] args) {
+		
+		//Create List.
 		List<Items> resultList;
-	    List<Items> itemList = new ArrayList<>();
+	    	List<Items> itemList = new ArrayList<>();
+		
+		//Insert element into the list.
 		itemList.add(new Items(101, "Ted", "Creative", true, 10000));
 		itemList.add(new Items(107, "Nexus", "Smartphone", true, 20000));
 		itemList.add(new Items(108, "Timex", "watch", true, 70000));
@@ -26,8 +30,9 @@ public class ItemExample {
 		itemList.add(new Items(105, "Think", "Tablet", false, 4000));
 		itemList.add(new Items(109, "Sony Vaio", "Laptop", false, 8000));
 		itemList.add(new Items(102, "Oneplus", "smartphone", true, 33000));
-		resultList = itemList.stream().filter(x -> x.getBrand().startsWith("T")).sorted(Comparator.comparing(Items::getPrice).reversed())
-		.collect(Collectors.toList());
+		
+		//Filter Items By Brands Starts with 'T' and Sort By Highest Price Using Streams and Lambda
+		resultList = itemList.stream().filter(x -> x.getBrand().startsWith("T")).sorted(Comparator.comparing(Items::getPrice).reversed()).collect(Collectors.toList());
 		resultList.stream().forEach(System.out::println);
 	}
 
